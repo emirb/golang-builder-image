@@ -4,8 +4,7 @@ services:
   - docker
 
 env:
-  - IMAGE=emirb/golang-builder-image
-  - TAG=1.11
+  - IMAGE=emirb/golang-builder-image TAG=1.11
   
 script:
   - travis_retry docker build --compress -t $IMAGE:$TAG .
