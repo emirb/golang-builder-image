@@ -1,0 +1,14 @@
+sudo: false
+
+services:
+  - docker
+
+env:
+  - IMAGE=emirb/golang-builder-image
+  - TAG=1.11
+  
+script:
+  - travis_retry docker build --compress -t $IMAGE:$TAG .
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then travis_retry docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; travis_retry docker push $IMAGE:$TAG; fi
