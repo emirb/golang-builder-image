@@ -4,6 +4,9 @@ dist: xenial
 services:
   - docker
 
+notifications:
+  email: false
+
 env:
   - IMAGE=emirb/golang-builder-image TAG=1.11
   
