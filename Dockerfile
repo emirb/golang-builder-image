@@ -1,4 +1,4 @@
-FROM golang:1.11
+FROM golang:1.12
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends gcc make git ca-certificates mysql-client bash python-pip python-setuptools && \
