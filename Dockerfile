@@ -9,4 +9,3 @@ RUN pip install ansible
 
 RUN curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin latest
 RUN curl -sfL https://taskfile.org/install.sh | sh -s -- -b $(go env GOPATH)/bin latest
-
